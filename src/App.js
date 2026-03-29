@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/casadaquinta/">
       <div className="App">
         {/* Header renderizado em todas as páginas */}
         <Header />
