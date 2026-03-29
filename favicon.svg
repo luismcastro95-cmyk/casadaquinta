@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#2c5f2d" stroke="#d4a574" stroke-width="4"/>
+  
+  <!-- Horse head silhouette -->
+  <g transform="translate(100, 80)">
+    <!-- Ears -->
+    <ellipse cx="-15" cy="-25" rx="6" ry="15" fill="#c85a17"/>
+    <ellipse cx="15" cy="-25" rx="6" ry="15" fill="#c85a17"/>
+    
+    <!-- Head -->
+    <path d="M -20 -10 Q -25 0 -20 15 L 20 15 Q 25 0 20 -10 Z" fill="#d4a574"/>
+    
+    <!-- Muzzle -->
+    <ellipse cx="0" cy="18" rx="12" ry="8" fill="#c9a361"/>
+    
+    <!-- Nostril -->
+    <circle cx="-5" cy="18" r="2" fill="#333"/>
+    <circle cx="5" cy="18" r="2" fill="#333"/>
+    
+    <!-- Eye -->
+    <circle cx="-8" cy="2" r="3" fill="#333"/>
+    
+    <!-- Mane -->
+    <path d="M 0 -12 Q -8 -8 -10 0 Q -8 -5 0 -8 Q 8 -5 10 0" fill="#2c5f2d"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="150" r="3" fill="#d4a574" opacity="0.6"/>
+  <circle cx="150" cy="150" r="3" fill="#d4a574" opacity="0.6"/>
+</svg>

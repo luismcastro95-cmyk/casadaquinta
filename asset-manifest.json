@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/casadaquinta/static/css/main.7889f7e0.css",
+    "main.js": "/casadaquinta/static/js/main.134e33b8.js",
+    "static/js/453.6fb59efe.chunk.js": "/casadaquinta/static/js/453.6fb59efe.chunk.js",
+    "index.html": "/casadaquinta/index.html",
+    "main.7889f7e0.css.map": "/casadaquinta/static/css/main.7889f7e0.css.map",
+    "main.134e33b8.js.map": "/casadaquinta/static/js/main.134e33b8.js.map",
+    "453.6fb59efe.chunk.js.map": "/casadaquinta/static/js/453.6fb59efe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7889f7e0.css",
+    "static/js/main.134e33b8.js"
+  ]
+}
