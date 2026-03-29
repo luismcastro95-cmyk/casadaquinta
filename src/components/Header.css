@@ -1,0 +1,236 @@
+/* src/components/Header.css - Premium Design */
+
+.header {
+  background-color: var(--surface-color);
+  padding: 1rem 0;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  font-size: 1.4rem;
+  font-weight: 400;
+  transition: opacity var(--transition-smooth);
+}
+
+.header-logo:hover {
+  opacity: 0.8;
+}
+
+.logo-image {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.logo-text {
+  color: var(--primary-color);
+  letter-spacing: -0.3px;
+}
+
+.header-nav {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color var(--transition-smooth);
+  letter-spacing: 0.3px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width var(--transition-smooth);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Botão CTA Premium "Marcar Aula" */
+.nav-link.cta-book {
+  background-color: var(--accent-color);
+  color: white !important;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 6px;
+  transition: all var(--transition-normal);
+  box-shadow: 0 2px 8px rgba(200, 90, 23, 0.2);
+}
+
+.nav-link.cta-book:hover {
+  background-color: #b34d0f;
+  box-shadow: 0 4px 12px rgba(200, 90, 23, 0.35);
+  transform: translateY(-2px);
+}
+
+.nav-link.cta-book::after {
+  display: none;
+}
+
+/* Menu toggle para mobile */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: none;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 20px;
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after,
+.hamburger {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: all var(--transition-normal);
+}
+
+.hamburger::before {
+  top: 0;
+}
+
+.hamburger {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger::after {
+  bottom: 0;
+}
+
+.hamburger.active::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger.active {
+  background-color: transparent;
+}
+
+.hamburger.active::after {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+/* Responsivo para tablets e mobile */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .header-logo {
+    font-size: 1.4rem;
+  }
+
+  .logo-icon {
+    font-size: 1.6rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--surface-color);
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
+    box-shadow: var(--shadow-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal);
+  }
+
+  .header-nav.active {
+    max-height: 500px;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    padding: var(--spacing-sm) 0;
+  }
+
+  .nav-link::after {
+    bottom: -8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    font-size: 1.2rem;
+  }
+
+  .logo-icon {
+    font-size: 1.4rem;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .header-nav {
+    gap: var(--spacing-sm);
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+}

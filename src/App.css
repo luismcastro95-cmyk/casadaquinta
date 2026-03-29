@@ -1,38 +1,294 @@
+/* src/App.css */
+
+/* 
+  Design System Premium - Casa da Quintã 1717
+  Inspirado em Equitours: elegância, natureza, espaçamento generoso
+*/
+
+:root {
+  /* Cores - Paleta Natural e Premium */
+  --primary-color: #3d6b40; /* Verde natural profundo */
+  --primary-light: #5a8a5d; /* Verde natural claro */
+  --primary-dark: #1f3c22; /* Verde muito escuro */
+  
+  /* Tons de Terra - Elegância natural */
+  --earth-light: #f5f1ed; /* Off-white natural */
+  --earth-warm: #e8dfd7; /* Bege claro */
+  --earth-mid: #c9b9a8; /* Bege médio */
+  --earth-dark: #8b7d6b; /* Marrom terroso */
+  
+  /* Destaques - Subtis e elegantes */
+  --accent-warm: #d4a574; /* Bronze quente */
+  --accent-gold: #c9a86b; /* Ouro suave */
+  
+  /* Neutros */
+  --background-color: #faf8f5; /* Off-white premium */
+  --surface-color: #ffffff; /* Branco puro */
+  --border-color: #e8e1d9; /* Borda suave */
+  --text-primary: #2c2c2c; /* Preto suave */
+  --text-secondary: #6b6b6b; /* Cinzento elegante */
+  --text-light: #9b9b9b; /* Cinzento claro */
+  
+  /* Tipografia Premium */
+  --heading-font: 'Georgia', 'Garamond', 'Baskerville', serif;
+  --body-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  
+  /* Espaçamento Generoso (Equitours-style) */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2.5rem;
+  --spacing-xl: 3.5rem;
+  --spacing-xxl: 5rem;
+  
+  /* Sombras Subtis */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.12);
+  
+  /* Transições */
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.2s ease;
+}
+
+/* Reset e base */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* Tipografia - Premium e Elegante */
+h1 {
+  font-family: var(--heading-font);
+  color: var(--primary-dark);
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-md);
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Botões - Elegância Minimalista */
+.button-style {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2px;
+  font-family: var(--body-font);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  text-decoration: none;
+  text-align: center;
+}
+
+.button-style.primary {
+  background-color: var(--primary-color);
   color: white;
+  border: 1px solid var(--primary-color);
 }
 
-.App-link {
-  color: #61dafb;
+.button-style.primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.button-style.secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.button-style.secondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.button-style.accent {
+  background-color: var(--accent-warm);
+  color: white;
+  border: 1px solid var(--accent-warm);
+}
+
+.button-style.accent:hover {
+  background-color: var(--earth-dark);
+  border-color: var(--earth-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Containers */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-xxl) 0;
+}
+
+.section.alt {
+  background-color: var(--earth-light);
+}
+
+h3 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Estilos globais para botões e links de ação */
+button, 
+.button-style {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) calc(var(--spacing-sm) * 2);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  transition: background-color var(--transition-normal), 
+              transform var(--transition-fast),
+              box-shadow var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+button:hover, 
+.button-style:hover {
+  background-color: var(--secondary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+button:active,
+.button-style:active {
+  transform: translateY(0);
+}
+
+/* Variantes de botões */
+button.primary,
+.button-style.primary {
+  background-color: var(--primary-color);
+}
+
+button.primary:hover,
+.button-style.primary:hover {
+  background-color: var(--primary-dark);
+}
+
+button.accent,
+.button-style.accent {
+  background-color: var(--accent-color);
+}
+
+button.accent:hover,
+.button-style.accent:hover {
+  background-color: #a6441b;
+}
+
+/* Links com estilo consistente */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--secondary-dark);
+}
+
+/* Containers e cards */
+.card {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Seções */
+section {
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  main {
+    padding: var(--spacing-md) var(--spacing-sm);
   }
 }
